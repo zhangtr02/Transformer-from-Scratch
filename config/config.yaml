@@ -1,0 +1,32 @@
+# Model parameters
+model:
+  d_model: 512
+  d_ff: 2048
+  num_heads: 8
+  num_layers: 6
+  dropout: 0.1
+  max_seq_length: 100
+
+# Training parameters
+training:
+  batch_size: 256
+  epochs: 30
+  learning_rate: 1
+  betas: [0.9, 0.98]
+  eps: 1e-9
+  warmup_steps: 4000
+  label_smoothing: 0.1
+  max_grad_norm: 1.0
+  num_workers: 8
+
+# Paths
+paths:
+  train_path: "data/wmt14_de_en/train"
+  valid_path: "data/wmt14_de_en/validation"
+  test_path: "data/wmt14_de_en/test"
+  src_sp_model: 'bpe_models/bpe_de.model'
+  tgt_sp_model: 'bpe_models/bpe_en.model'
+  checkpoint_dir: 'checkpoints'
+  log_dir: 'logs'
+  figure_dir: 'figures'
+  vocabularies_dir: 'vocabularies'

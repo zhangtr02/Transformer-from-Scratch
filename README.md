@@ -9,6 +9,7 @@ Transformer-from-Scratch/
 ├── bpe_models/         # SentencePiece BPE models
 ├── checkpoints/        # Model checkpoints
 ├── config/             # Configuration files
+│   └── config.yaml
 ├── data/               # Raw and processed data
 ├── figures/            # Training/validation figures
 ├── logs/               # Training and evaluation logs
@@ -67,7 +68,9 @@ python test.py
 - Label smoothing loss
 - Noam learning rate scheduler
 - SentencePiece BPE tokenization
+- Greedy decoding for sequence generation
 - BLEU score evaluation
+- Training/validation curve visualization
 - Checkpoint saving and loading
 
 ## Requirements
@@ -86,7 +89,7 @@ pip install torch sentencepiece datasets tqdm
 
 ## Configuration
 
-You can modify hyperparameters and paths in `config.yaml` or the corresponding config files.
+You can modify hyperparameters and paths in `config.yaml`.
 
 ## Citation
 
